@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+.retangulo {
+    width: 100%;
+    height: 200px;
+    background-color: #f3b81b;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.retangulo::before,
+.retangulo::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background-color: #000000;
+}
+
+.retangulo::before {
+    top: -1px;
+    border-bottom: 1px solid #000000;
+    border-radius: 0 0 100% 100% / 0 0 100% 100%;
+}
+
+.retangulo::after {
+    bottom: -1px;
+    border-top: 1px solid #000000;
+    border-radius: 100% 100% 0 0 / 100% 100% 0 0;
+}
+
